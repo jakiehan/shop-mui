@@ -1,4 +1,2 @@
 node_modules
 .eslintrc.js
-declaration.d.ts
-global.d.ts
