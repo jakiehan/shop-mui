@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Product } from 'types';
 import { BASE_URL } from 'utils/constants';
 import { Like } from '../Like';
-import { CardStyled, CardTitle, CardPrice, CardImage } from './Card.styled';
+import { CardStyled, CardMedia, Typography } from './Card.styled';
 
 interface CardProps {
   cardInfo: Product;
@@ -24,20 +24,22 @@ export const Card = ({ cardInfo }: CardProps) => {
       onClick={handleClick}
     >
       <Like isActive={like} />
-      <CardImage
+      <CardMedia
+        className="card-image"
         component="img"
         src={`${BASE_URL}${picture.path}`}
         alt={name}
       />
-      <CardTitle
+      <Typography
+        className="card-title"
         component="h2"
         title={name}
       >
         {name}
-      </CardTitle>
-      <CardPrice>
+      </Typography>
+      <Typography className="card-price">
         ${price.value}
-      </CardPrice>
+      </Typography>
     </CardStyled>
   );
 };

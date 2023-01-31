@@ -22,6 +22,7 @@ export const Description = ({
       <TitleStyled
         component={customTag}
         isSubtitle={isSubtitle}
+        variant={type}
       >
         {textTitle}
       </TitleStyled>

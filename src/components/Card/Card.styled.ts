@@ -18,32 +18,32 @@ const CardStyled = styled(CardComponent)(({ theme }) => ({
 
   [theme.breakpoints.up('sm')]: {
     width: '13.75rem'
+  },
+
+  '.card-image': {
+    height: '8.75rem',
+    margin: '0.5rem 0',
+    objectFit: 'none',
+  },
+
+  '.card-title': {
+    width: '100%',
+    padding: '0.594rem 0',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    fontSize: '1.125rem',
+    lineHeight: '1.17em',
+    textAlign: 'center',
+    whiteSpace: 'nowrap',
+    color: theme.color.darkGrey,
+  },
+
+  '.card-price': {
+    padding: '0.125rem 0',
+    fontSize: '0.875rem',
+    lineHeight: '1.14em',
+    color: '#545454',
   }
 })) as typeof CardComponent;
 
-const CardImage = styled(CardMedia)(({ theme }) => ({
-  height: '8.75rem',
-  margin: '0.5rem 0',
-  objectFit: 'none',
-})) as typeof CardMedia;
-
-const CardTitle = styled(Typography)(({ theme }) => ({
-  width: '100%',
-  padding: '0.594rem 0',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  fontSize: '1.125rem',
-  lineHeight: '1.17em',
-  textAlign: 'center',
-  whiteSpace: 'nowrap',
-  color: theme.color.darkGrey,
-})) as typeof Typography;
-
-const CardPrice = styled(Typography)(({ theme }) => ({
-  padding: '0.125rem 0',
-  fontSize: '0.875rem',
-  lineHeight: '1.14em',
-  color: '#545454',
-})) as typeof Typography;
-
-export { CardStyled, CardTitle, CardPrice, CardImage }
+export { CardStyled, CardMedia, Typography }
